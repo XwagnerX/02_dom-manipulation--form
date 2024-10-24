@@ -1,0 +1,99 @@
+/* SANITIZE CSS */
+
+/* Document */
+/* Correct the line height in all browsers. */
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+  }
+  
+  /* Sections */
+  /* Remove the margin in all browsers. */
+  body {
+    margin: 0;
+  }
+  
+  /* Add a line-height to all headers to preserve spacing. */
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.5;
+  }
+  
+  /* Grouping content */
+  /* Remove the margin on lists in all browsers. */
+  ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  /* Text-level semantics */
+  /* Remove the gray background on active links in IE 10. */
+  a {
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  /* Correct the font size and margin on `h1` elements within `section` and `article` in Chrome, Firefox, and Safari. */
+  h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+  }
+  
+  /* Embedded content */
+  /* Remove the border on images inside links in IE 10. */
+  img {
+    border-style: none;
+  }
+  
+  /* Forms */
+  /* Remove the margin on controls in Safari and Chrome. */
+  button, input, select, textarea {
+    margin: 0;
+  }
+  
+  /* Correct the inability to style clickable types in iOS and Safari. */
+  button, input {
+    overflow: visible;
+  }
+  
+  /* Remove the inheritance of text transform in Firefox. */
+  button, select {
+    text-transform: none;
+  }
+  
+  /* Remove the inner border and padding in Firefox. */
+  button, input[type="button"], input[type="reset"], input[type="submit"] {
+    -webkit-appearance: button;
+  }
+  
+  /* Interactive */
+  /* Remove the inheritance of text transform in Firefox. */
+  button, select {
+    text-transform: none;
+  }
+  
+  /* Correct the inability to style clickable types in iOS and Safari. */
+  button, [type="button"], [type="reset"], [type="submit"] {
+    -webkit-appearance: button;
+  }
+  
+  /* Remove the inner border and padding in Firefox. */
+  button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+  }
+  
+  /* Restore the focus styles unset by the previous rule. */
+  button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+  }
+  
+  /* Fix for the button appearance in iOS/Safari */
+  button, select {
+    appearance: none;
+  }
+  
+  /* Accessibility improvements */
+  [hidden] {
+    display: none;
+  }
