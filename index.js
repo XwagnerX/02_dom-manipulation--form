@@ -1,22 +1,45 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const $form = document.querySelector("form");
-  
-    $form.addEventListener("submit", function (event) {
-      event.preventDefault(); // Previene el envío tradicional del formulario
-  
-      // Llamamos a la función que recoge los datos del formulario
+  const $form = document.getElementById("note-form");
+  const $notesList = document.getElementById("notes-list");
+
+  $form.addEventListener("submit", function(event) {
+      event.preventDefault();
+
       handleFormSubmit(event);
-    });
   });
-  
-  // Función que maneja los datos del formulario
-  function handleFormSubmit(event) {
-    // Obtenemos los valores usando event.target
-    const $title = event.target.title.value;
-    const $content = event.target.content.value;
-  
-    // Mostramos los valores en la consola
-    console.log("title:", $title);
-    console.log("content:", $content);
+});
+
+function handleFormSubmit(event) {
+  const $title = sanitize(event.target.title.value.trim());
+  const $content = sanitize(event.target.content.value.trim());
+  const $priority = sanitize(event.target.priority.value);
+
+  if (!$priority) {
+      console.log("No priority");
+      alert("Please select a priority.");
+      return;
   }
-  
+
+  console.log("title:", $title);
+  console.log("content:", $content);
+  console.log("priority:", $priority);
+
+  const noteItem = document.createElement("li");
+  noteItem.className = `note-item priority-${$priority}`;
+  noteItem.innerHTML = `
+      <h3>${$title}</h3>
+      <p>${$content}</p>
+      <span class="priority">Priority: ${$priority}</span>
+  `;
+
+  const $notesList = document.getElementById("notes-list");
+  $notesList.appendChild(noteItem);
+
+  event.target.reset();
+}
+
+function sanitize(input) {
+  const div = document.createElement("div");
+  div.textContent = input;
+  return div.innerHTML;
+}
